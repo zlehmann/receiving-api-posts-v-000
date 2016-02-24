@@ -2,7 +2,7 @@
 
 ## Objectives
 
-  1. Understand how `params` comes in from POST requests.
+  1. Serialize form values into `params` for AJAX POST requests.
   2. Use those `params` to create resources.
   3. Return and consume the created resource as JSON.
 
@@ -48,7 +48,7 @@ submit as it normally would.
     $('form').submit(function(event) {
       //prevent form from submitting the default way
       event.preventDefault();
-      alert("we r hack3rz);
+      alert("we r hack3rz");
     });
   });
 </script>
@@ -161,9 +161,11 @@ You'll see the full HTML of the `show` page for that new post.
 HTTP status codes exist to let the client know what kind of response
 they are getting, and what to do with it.
 
-The code for a redirect is `302`. When a browser makes a request, and
-gets a `302` code, it knows that it need to follow the "redirect" to the
+The code for the kind of redirect that happens when we put `redirect_to` in our controller is `302`. When a browser makes a request, and gets a `302` code, it knows that it need to follow the "redirect" to the
 given link and load that page next.
+
+**Advanced:** The `302` redirect is considered a *temporary*, or *found* redirect, as in, "You found the
+right thing, but now go to this URL." There's other `300` codes as well, and they all deal with redirects, such as the `301` redirect, which tells the requestor that the resource they are looking for has moved permanently. Check out the full list of HTTP codes [here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection).
 
 AJAX requests don't follow redirects because they *can't*. If they did,
 then you would lose any code that happens in the `done()` function and
