@@ -161,7 +161,7 @@ You'll see the full HTML of the `show` page for that new post.
 HTTP status codes exist to let the client know what kind of response
 they are getting, and what to do with it.
 
-The code for the kind of redirect that happens when we put `redirect_to` in our controller is `302`. When a browser makes a request, and gets a `302` code, it knows that it need to follow the "redirect" to the
+The code for the kind of redirect that happens when we put `redirect_to` in our controller is `302`. When a browser makes a request, and gets a `302` code, it knows that it needs to follow the "redirect" to the
 given link and load that page next.
 
 **Advanced:** The `302` redirect is considered a *temporary*, or *found* redirect, as in, "You found the
@@ -261,3 +261,5 @@ and show it to the user without ever leaving the page!
 Maybe we're l33t after all!
 
 ![hackers dance](http://i.giphy.com/O3Ax7nxRerbI4.gif)
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/receiving-api-posts'>Receiving API POSTs</a> on Learn.co and start learning to code for free.</p>
