@@ -198,7 +198,7 @@ ActiveModel::Serializer that we already have.
   end
 ```
 
-**Note::** We are specifying the `status: 201` for this request, rather
+**Note:** We are specifying the `status: 201` for this request, rather
 than the standard `200`, which means `OK`. Technically, this is a
 successful request and could be considered `200`, but we want to
 specify what happened more granularly, and `201` means that the resource
