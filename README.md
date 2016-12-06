@@ -238,7 +238,7 @@ template to handle the response and display it on the page.
       var posting = $.post('/posts', values);
 
       posting.done(function(data) {
-        var post = data["post"];
+        var post = data;
         $("#postTitle").text(post["title"]);
         $("#postBody").text(post["description"]);
       });
