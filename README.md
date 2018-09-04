@@ -2,9 +2,9 @@
 
 ## Objectives
 
-  1. Serialize form values into `params` for AJAX POST requests.
-  2. Use those `params` to create resources.
-  3. Return and consume the created resource as JSON.
+1.  Serialize form values into `params` for AJAX POST requests.
+2.  Use those `params` to create resources.
+3.  Return and consume the created resource as JSON.
 
 ## Lesson
 
@@ -132,7 +132,7 @@ it comes from the form or from an AJAX request.
 
 Okay, so we did create a post. But if we look in our controller, we're
 supposedly redirecting to our `post_path`. And if we look further into
-our running Rails server, we'll see that it *did* redirect after
+our running Rails server, we'll see that it _did_ redirect after
 creating our post. What gives?
 
 ### Getting a Response from an AJAX POST
@@ -147,10 +147,10 @@ You can see this in action by adding a `console.log(data)` inside the
 
 ```javascript
 //...
-  posting.done(function(data) {
-    // TODO: handle response
-    console.log(data);
-  });
+posting.done(function(data) {
+	// TODO: handle response
+	console.log(data);
+});
 //...
 ```
 
@@ -164,10 +164,10 @@ they are getting, and what to do with it.
 The code for the kind of redirect that happens when we put `redirect_to` in our controller is `302`. When a browser makes a request, and gets a `302` code, it knows that it needs to follow the "redirect" to the
 given link and load that page next.
 
-**Advanced:** The `302` redirect is considered a *temporary*, or *found* redirect, as in, "You found the
+**Advanced:** The `302` redirect is considered a _temporary_, or _found_ redirect, as in, "You found the
 right thing, but now go to this URL." There's other `300` codes as well, and they all deal with redirects, such as the `301` redirect, which tells the requestor that the resource they are looking for has moved permanently. Check out the full list of HTTP codes [here](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection).
 
-AJAX requests don't follow redirects because they *can't*. If they did,
+AJAX requests don't follow redirects because they _can't_. If they did,
 then you would lose any code that happens in the `done()` function and
 just go to a new page that doesn't have that JavaScript code.
 
